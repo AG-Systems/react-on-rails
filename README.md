@@ -43,9 +43,9 @@ This is something new to rails 5 where we are able to have our rails application
 
 ### Now, lets create our Model. How do we do this in rails?
 
-<details>
-<summary>Solution</summary>
-```rails g model Post title:string description:text
+<details><summary>Solution</summary>
+```ruby
+  rails g model Post title:string description:text
 
   rails db:migrate
 ```
@@ -54,7 +54,8 @@ This is something new to rails 5 where we are able to have our rails application
 ### Lets add some data to our DB. How should we do this?
 
 <details><summary>Solution</summary>
-``` 10.times { Post.create!(title: "Blog Posting All Dayyy", description: "Lorem what... Lazy Lazy Lazy Lazy Cool we'll delete these laterzzz!") }
+```
+10.times { Post.create!(title: "Blog Posting All Dayyy", description: "Lorem what... Lazy Lazy Lazy Lazy Cool we'll delete these laterzzz!") }
 
 rails db:seed
 ```
@@ -166,6 +167,7 @@ rails g controller pages index
 
 
 And we'll set this as our root route
+
 ```ruby
 Rails.application.routes.draw do
   root 'pages#index'
@@ -199,7 +201,7 @@ In your components folder lets make our first JSX file in rails:
   touch app/assets/javascripts/components/_main.js.jsx
 ```
 
-And lets make a Man component that returns Hello World (try to do this on your own) Hint we need to use React.createClass in rails.
+And lets make a Main component that returns Hello World (try to do this on your own) Hint we need to use React.createClass in rails.
 
 <details><summary>Solution Code:</summary>
 ```js
