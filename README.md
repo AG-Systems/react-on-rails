@@ -38,28 +38,24 @@ This is something new to rails 5 where we are able to have our rails application
 
 <details>
 <summary>Solution</summary>
-```rails new react_clock_blog```
+  rails new react_clock_blog
 </details>
 
 ### Now, lets create our Model. How do we do this in rails?
 
 <details><summary>Solution</summary>
-```ruby
   rails g model Post title:string description:text
 
   rails db:migrate
-```
 </details>
 
 ### Lets add some data to our DB. How should we do this?
 
-<details><summary>Solution</summary>
 ```
 10.times { Post.create!(title: "Blog Posting All Dayyy", description: "Lorem what... Lazy Lazy Lazy Lazy Cool we'll delete these laterzzz!") }
 
 rails db:seed
 ```
-</details>
 
 ### Now lets move onto our controllers
 
@@ -110,7 +106,6 @@ end
 
 Now we can build our crud actions in our items_controller
 
-<details><summary>Solution Code</summary>
 ```ruby
 class Api::PostsController < Api::BaseController
   def index
@@ -138,7 +133,6 @@ class Api::PostsController < Api::BaseController
   end
 end
 ```
-</details>
 
 And our routes are going to look a little different since we are going one directory deeper.
 
@@ -203,7 +197,6 @@ In your components folder lets make our first JSX file in rails:
 
 And lets make a Main component that returns Hello World (try to do this on your own) Hint we need to use React.createClass in rails.
 
-<details><summary>Solution Code:</summary>
 ```js
 const Main = React.createClass ({
   render () {
@@ -215,7 +208,6 @@ const Main = React.createClass ({
   }
 })
 ```
-</details>
 
 Lets spin up those severs and see if hello world has come through!
 
